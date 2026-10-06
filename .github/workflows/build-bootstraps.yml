@@ -28,14 +28,12 @@ jobs:
       - name: Pull builder image
         run: docker pull ghcr.io/termux/package-builder:latest
 
-      - name: Make checkout writable for container builder user
-        run: sudo chmod -R a+rwX .
-
       - name: Build bootstrap (${{ matrix.arch }})
         run: ./scripts/run-docker.sh ./scripts/build-bootstraps.sh --architectures ${{ matrix.arch }}
 
-      - name: Verify zip
+      - name: Extract zip from container
         run: |
+          sudo docker cp termux-package-builder:/tmp/bootstrap-${{ matrix.arch }}.zip ./bootstrap-${{ matrix.arch }}.zip
           ls -la bootstrap-${{ matrix.arch }}.zip
           sha256sum bootstrap-${{ matrix.arch }}.zip
 
