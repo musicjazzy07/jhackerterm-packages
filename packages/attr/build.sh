@@ -4,12 +4,12 @@ TERMUX_PKG_LICENSE="GPL-2.0"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="2.6.0"
 TERMUX_PKG_SRCURL=(
-	"https://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
-	"http://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
+	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/attr-2.6.0.tar.xz"
+	"https://src.fedoraproject.org/repo/pkgs/attr/attr-2.6.0.tar.xz/sha512/870d0c34fbaa7520aad058ecd6509fe8eddd17430781a16d1e80484d4947307a7c641f0449183cbac1da611a85f82c9bee2d2d7bff76170fc2195b123100d22e/attr-2.6.0.tar.xz"
 )
 TERMUX_PKG_SHA256=(
-	d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
-	d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
+	6c8a2148a7b85043b68492bce43316b0e2e214fc4e628c7ede078e76e216330b
+	6c8a2148a7b85043b68492bce43316b0e2e214fc4e628c7ede078e76e216330b
 )
 TERMUX_PKG_AUTO_UPDATE=true
 TERMUX_PKG_BREAKS="attr-dev"
