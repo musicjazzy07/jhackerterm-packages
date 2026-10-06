@@ -3,8 +3,14 @@ TERMUX_PKG_DESCRIPTION="Utilities for manipulating filesystem extended attribute
 TERMUX_PKG_LICENSE="GPL-2.0"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="2.6.0"
-TERMUX_PKG_SRCURL="http://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
-TERMUX_PKG_SHA256=d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
+TERMUX_PKG_SRCURL=(
+	"https://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
+	"http://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
+)
+TERMUX_PKG_SHA256=(
+	d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
+	d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
+)
 TERMUX_PKG_AUTO_UPDATE=true
 TERMUX_PKG_BREAKS="attr-dev"
 TERMUX_PKG_REPLACES="attr-dev"
