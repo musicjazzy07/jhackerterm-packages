@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Free disk space
-        run: sudo bash scripts/free-space.sh
+        run: sudo -E bash scripts/free-space.sh
 
       - name: Pull builder image
         run: docker pull ghcr.io/termux/package-builder:latest
