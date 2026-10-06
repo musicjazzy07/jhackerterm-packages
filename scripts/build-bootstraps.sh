@@ -246,7 +246,11 @@ create_bootstrap_archive() {
 		zip -r9 "${BOOTSTRAP_TMPDIR}/bootstrap-${1}.zip" ./*
 	)
 
-	mv -f "${BOOTSTRAP_TMPDIR}/bootstrap-${1}.zip" "$TERMUX_PACKAGES_DIRECTORY/"
+	mv -f "${BOOTSTRAP_TMPDIR}/bootstrap-${1}.zip" "$TERMUX_PACKAGES_DIRECTORY/" 2>/dev/null || \
+		cp -f "${BOOTSTRAP_TMPDIR}/bootstrap-${1}.zip" "/tmp/bootstrap-${1}.zip"
+	# Always leave a copy in /tmp for CI extraction via docker cp
+	cp -f "$TERMUX_PACKAGES_DIRECTORY/bootstrap-${1}.zip" "/tmp/bootstrap-${1}.zip" 2>/dev/null || \
+		cp -f "${BOOTSTRAP_TMPDIR}/bootstrap-${1}.zip" "/tmp/bootstrap-${1}.zip" 2>/dev/null || true
 
 	echo "[*] Finished successfully (${1})."
 
