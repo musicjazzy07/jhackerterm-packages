@@ -1,0 +1,59 @@
+name: Build Jhacker packages
+
+# Builds a curated set of Termux packages from source with
+# $PREFIX=/data/data/com.jazzy.jhackerterminal/files/usr baked in,
+# for the Jhacker Terminal fork's own apt repository.
+#
+# Trigger manually from the Actions tab. Matrix: 4 arches x 3 shards = 12 jobs.
+# Built .debs are uploaded as artifacts; the "Publish Jhacker apt repo"
+# workflow assembles them into a GitHub-Pages-hosted apt repository.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [aarch64, arm, i686, x86_64]
+        shard: [1, 2, 3]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: sudo -E bash scripts/free-space.sh
+
+      - name: Pull builder image
+        run: docker pull ghcr.io/termux/package-builder:latest
+
+      - name: Build packages (arch ${{ matrix.arch }}, shard ${{ matrix.shard }})
+        run: |
+          case "${{ matrix.shard }}" in
+            1) PKGS="git openssh wget vim htop tmux jq dnsutils whois zip unzip 7zip apt dpkg termux-tools bash coreutils dash" ;;
+            2) PKGS="python nmap iproute2 net-tools fzf ripgrep make libcurl proot proot-distro" ;;
+            3) PKGS="nodejs golang ffmpeg imagemagick php ruby" ;;
+          esac
+          echo "Building: $PKGS"
+          # shellcheck disable=SC2086
+          ./scripts/run-docker.sh ./build-package.sh -a ${{ matrix.arch }} -o /tmp/debs $PKGS
+
+      - name: Extract debs from container
+        run: |
+          sudo docker cp termux-package-builder:/tmp/debs ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}
+          echo "--- deb count ---"
+          ls ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb | wc -l
+          echo "--- sample ---"
+          ls ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb | head -20
+          echo "--- prefix sanity: no com.termux paths inside binaries ---"
+          ! grep -rl "/data/data/com.termux" ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb || echo "WARNING: some debs reference old prefix"
+
+      - name: Upload debs
+        uses: actions/upload-artifact@v4
+        with:
+          name: debs-${{ matrix.arch }}-shard${{ matrix.shard }}
+          path: ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/
+          retention-days: 14
