@@ -3,8 +3,14 @@ TERMUX_PKG_DESCRIPTION="An open-source library designed for Blu-Ray Discs playba
 TERMUX_PKG_LICENSE="LGPL-2.1"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="1.5.1"
-TERMUX_PKG_SRCURL=https://code.videolan.org/videolan/libbluray/-/archive/${TERMUX_PKG_VERSION}/libbluray-${TERMUX_PKG_VERSION}.tar.gz
-TERMUX_PKG_SHA256=ee46f99adc591d18a9485b404cb04be6ba6fcde5bd45590ea94d0c1432d448c9
+TERMUX_PKG_SRCURL=(
+	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/libbluray-${TERMUX_PKG_VERSION}.tar.gz"
+	"https://code.videolan.org/videolan/libbluray/-/archive/${TERMUX_PKG_VERSION}/libbluray-${TERMUX_PKG_VERSION}.tar.gz"
+)
+TERMUX_PKG_SHA256=(
+	ee46f99adc591d18a9485b404cb04be6ba6fcde5bd45590ea94d0c1432d448c9
+	ee46f99adc591d18a9485b404cb04be6ba6fcde5bd45590ea94d0c1432d448c9
+)
 TERMUX_PKG_AUTO_UPDATE=true
 TERMUX_PKG_DEPENDS="fontconfig, freetype, libudfread, libxml2"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
