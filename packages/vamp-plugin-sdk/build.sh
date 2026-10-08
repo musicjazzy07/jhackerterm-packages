@@ -4,10 +4,19 @@ TERMUX_PKG_LICENSE="MIT, BSD 3-Clause"
 TERMUX_PKG_LICENSE_FILE="COPYING"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION=2.10
-TERMUX_PKG_REVISION=3
+TERMUX_PKG_REVISION=4
 TERMUX_PKG_SRCURL=https://github.com/vamp-plugins/vamp-plugin-sdk/archive/refs/tags/vamp-plugin-sdk-v${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_SHA256=b552bc91817294c7f90ea07d70938642ebf15d5e3bafc81cf7d55efab9995399
 TERMUX_PKG_AUTO_UPDATE=true
 TERMUX_PKG_UPDATE_METHOD=repology
 TERMUX_PKG_DEPENDS="libc++, libsndfile"
 TERMUX_PKG_BUILD_IN_SRC=true
+
+termux_step_pre_configure() {
+	# Workaround: ld.lld from NDK r30 crashes with "Bus error (core dumped)" in
+	# scanVersionScript/assignWildcardVersion when linking
+	# examples/vamp-example-plugins.so with --version-script=build/vamp-plugin.map
+	# (hit on aarch64+i686 shard-3; the script only hides symbols in the example
+	# plugin .so, so dropping it is harmless).
+	sed -i 's/-Wl,--version-script=build\/vamp-plugin.map//' "$TERMUX_PKG_SRCDIR/Makefile.in"
+}
