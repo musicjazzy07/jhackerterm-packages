@@ -4,8 +4,10 @@ name: Publish Jhacker apt repo
 # apt repository and publishes it to the gh-pages branch, served via
 # GitHub Pages at https://musicjazzy07.github.io/jhackerterm-packages/
 #
-# Runs automatically when "Build Jhacker packages" finishes successfully,
-# or manually from the Actions tab (optionally for a specific run id).
+# Runs automatically when "Build Jhacker packages" finishes successfully
+# (only if that run produced ALL 12 deb artifacts — 4 arch x 3 shards;
+# partial/shard-only runs are skipped), or manually from the Actions tab
+# with a comma-separated list of run ids.
 
 on:
   workflow_run:
@@ -13,8 +15,8 @@ on:
     types: [completed]
   workflow_dispatch:
     inputs:
-      run_id:
-        description: "build-packages run id to publish (default: latest successful)"
+      run_ids:
+        description: "comma-separated build-packages run ids to publish (e.g. 37612387495,37712190757)"
         required: false
 
 permissions:
@@ -30,24 +32,49 @@ jobs:
         with:
           ref: master
 
-      - name: Download deb artifacts
+      - name: Resolve run ids
+        id: runs
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.run_id }}" ]; then
-            RUN_ID="${{ inputs.run_id }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ inputs.run_ids }}" ]; then
+            echo "ids=${{ inputs.run_ids }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "workflow_run" ]; then
-            RUN_ID="${{ github.event.workflow_run.id }}"
+            echo "ids=${{ github.event.workflow_run.id }}" >> "$GITHUB_OUTPUT"
           else
-            RUN_ID=$(gh run list --workflow "Build Jhacker packages" --status success --limit 1 --json databaseId -q '.[0].databaseId')
+            echo "ids=$(gh run list --workflow 'Build Jhacker packages' --status success --limit 1 --json databaseId -q '.[0].databaseId')" >> "$GITHUB_OUTPUT"
           fi
-          echo "Publishing debs from run $RUN_ID"
+          echo "resolved run ids: $(cat $GITHUB_OUTPUT)"
+
+      - name: Skip partial auto-trigger runs
+        if: ${{ github.event_name == 'workflow_run' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN_ID="${{ github.event.workflow_run.id }}"
+          N=$(gh api "repos/${{ github.repository }}/actions/runs/$RUN_ID/artifacts?per_page=100" \
+            -q '[.artifacts[] | select(.name | test("^debs-")) | .name] | unique | length')
+          echo "deb artifacts in triggering run $RUN_ID: $N (need 12 = 4 arch x 3 shards)"
+          if [ "$N" -lt 12 ]; then
+            echo "SKIP_PARTIAL=1" >> "$GITHUB_ENV"
+            echo "Partial (shard-only) run — skipping auto-publish. Publish via workflow_dispatch with run_ids instead."
+          fi
+
+      - name: Download deb artifacts
+        if: ${{ env.SKIP_PARTIAL != '1' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
           mkdir -p debs-in
-          gh run download "$RUN_ID" -D debs-in
+          for RUN_ID in $(echo "${{ steps.runs.outputs.ids }}" | tr ',' ' '); do
+            echo "== downloading debs from run $RUN_ID =="
+            gh run download "$RUN_ID" -D debs-in
+          done
           echo "--- total debs ---"
           find debs-in -name "*.deb" | wc -l
 
       - name: Generate apt repository metadata
+        if: ${{ env.SKIP_PARTIAL != '1' }}
         run: |
           python3 scripts/jhacker/generate-apt-repo.py --debs debs-in --out apt-repo
           echo "--- repo layout ---"
@@ -59,6 +86,7 @@ jobs:
           done
 
       - name: Publish to gh-pages branch
+        if: ${{ env.SKIP_PARTIAL != '1' }}
         run: |
           git config --global user.email "jhacker-ci@users.noreply.github.com"
           git config --global user.name "jhacker-ci"
