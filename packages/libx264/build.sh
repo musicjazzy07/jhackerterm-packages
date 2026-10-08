@@ -9,7 +9,7 @@ TERMUX_PKG_REVISION=1
 # code.videolan.org bot-blocks CI downloads; vendored mirror first (genuine tarball
 # from github.com/mirror/x264 at the same commit, SHA256-verified)
 TERMUX_PKG_SRCURL=(
-	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/x264-$_COMMIT.tar.gz"
+	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/x264-$_COMMIT.tar.bz2"
 	"https://code.videolan.org/videolan/x264/-/archive/$_COMMIT/x264-$_COMMIT.tar.bz2"
 )
 TERMUX_PKG_SHA256=(
