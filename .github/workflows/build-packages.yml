@@ -4,7 +4,8 @@ name: Build Jhacker packages
 # $PREFIX=/data/data/com.jazzy.jhackerterminal/files/usr baked in,
 # for the Jhacker Terminal fork's own apt repository.
 #
-# Trigger manually from the Actions tab. Matrix: 4 arches x 3 shards = 12 jobs.
+# Trigger manually from the Actions tab. Matrix: 4 arches x N shards.
+# Dispatch with shards="3" to rebuild only shard 3 (default: all).
 # Built .debs are uploaded as artifacts; the "Publish Jhacker apt repo"
 # workflow assembles them into a GitHub-Pages-hosted apt repository.
 
@@ -17,17 +18,27 @@ on:
         default: '1 2 3'
 
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.s.outputs.shards }}
+    steps:
+      - id: s
+        run: |
+          SHARDS="${{ github.event.inputs.shards }}"
+          [ -z "$SHARDS" ] && SHARDS="1 2 3"
+          JSON=$(printf '%s' "$SHARDS" | python3 -c "import json,sys; print(json.dumps(sys.stdin.read().split()))")
+          echo "shards=$JSON" >> "$GITHUB_OUTPUT"
+          echo "Building shards: $JSON"
+
   build:
-    # Allows re-running a single shard: dispatch with shards="3".
-    # Matrix shard values are 1/2/3; match with space padding to avoid
-    # substring surprises.
-    if: ${{ contains(format(' {0} ', github.event.inputs.shards || '1 2 3'), format(' {0} ', matrix.shard)) }}
+    needs: setup
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         arch: [aarch64, arm, i686, x86_64]
-        shard: [1, 2, 3]
+        shard: ${{ fromJSON(needs.setup.outputs.shards) }}
 
     steps:
       - name: Clone repository
