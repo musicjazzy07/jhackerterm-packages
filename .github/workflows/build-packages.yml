@@ -68,6 +68,11 @@ jobs:
           ls ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb | wc -l
           echo "--- sample ---"
           ls ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb | head -20
+          echo "--- sanitize filenames (upload-artifact rejects ':', e.g. golang-doc_3:1.27.1) ---"
+          for f in ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb; do
+            n=$(basename "$f" | tr ':' '_')
+            if [ "$(basename "$f")" != "$n" ]; then mv "$f" "$(dirname "$f")/$n"; fi
+          done
           echo "--- prefix sanity: no com.termux paths inside binaries ---"
           ! grep -rl "/data/data/com.termux" ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb || echo "WARNING: some debs reference old prefix"
 
