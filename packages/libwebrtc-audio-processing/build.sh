@@ -4,8 +4,16 @@ TERMUX_PKG_LICENSE="BSD 3-Clause"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="1.3"
 TERMUX_PKG_REVISION=5
-TERMUX_PKG_SRCURL="https://www.freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-${TERMUX_PKG_VERSION}.tar.gz"
-TERMUX_PKG_SHA256=95552fc17faa0202133707bbb3727e8c2cf64d4266fe31bfdb2298d769c1db75
+# freedesktop.org bot-blocks CI downloads (HTTP 418); vendored copy first
+# (genuine tarball from Debian, SHA256-verified against upstream)
+TERMUX_PKG_SRCURL=(
+	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/webrtc-audio-processing-1.3.tar.gz"
+	"https://www.freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-${TERMUX_PKG_VERSION}.tar.gz"
+)
+TERMUX_PKG_SHA256=(
+	95552fc17faa0202133707bbb3727e8c2cf64d4266fe31bfdb2298d769c1db75
+	95552fc17faa0202133707bbb3727e8c2cf64d4266fe31bfdb2298d769c1db75
+)
 TERMUX_PKG_DEPENDS="libc++, abseil-cpp"
 
 termux_step_pre_configure() {
