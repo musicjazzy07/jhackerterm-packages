@@ -6,8 +6,16 @@ _COMMIT=4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1
 # X264_BUILD from x264.h; commit count using "git rev-list --count HEAD" on x264 git repo
 TERMUX_PKG_VERSION="1:0.164.3191"
 TERMUX_PKG_REVISION=1
-TERMUX_PKG_SRCURL=https://code.videolan.org/videolan/x264/-/archive/$_COMMIT/x264-$_COMMIT.tar.bz2
-TERMUX_PKG_SHA256=2a1b197fd1fbc85045794f18c9353648a9ae3cbe194b7b92d523d096f9445464
+# code.videolan.org bot-blocks CI downloads; vendored mirror first (genuine tarball
+# from github.com/mirror/x264 at the same commit, SHA256-verified)
+TERMUX_PKG_SRCURL=(
+	"https://raw.githubusercontent.com/musicjazzy07/jhackerterm-packages/master/vendor/x264-$_COMMIT.tar.gz"
+	"https://code.videolan.org/videolan/x264/-/archive/$_COMMIT/x264-$_COMMIT.tar.bz2"
+)
+TERMUX_PKG_SHA256=(
+	44ce79258656d7dbe06165321cb989cc242a66effa308e25d2f0a197b50f8398
+	44ce79258656d7dbe06165321cb989cc242a66effa308e25d2f0a197b50f8398
+)
 TERMUX_PKG_BREAKS="libx264-dev"
 TERMUX_PKG_REPLACES="libx264-dev"
 # Avoid linking against ffmpeg libraries to avoid circular dependency:
