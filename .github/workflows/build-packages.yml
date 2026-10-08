@@ -10,9 +10,18 @@ name: Build Jhacker packages
 
 on:
   workflow_dispatch:
+    inputs:
+      shards:
+        description: 'Space-separated shards to build (default: 1 2 3)'
+        required: false
+        default: '1 2 3'
 
 jobs:
   build:
+    # Allows re-running a single shard: dispatch with shards="3".
+    # Matrix shard values are 1/2/3; match with space padding to avoid
+    # substring surprises.
+    if: ${{ contains(format(' {0} ', github.event.inputs.shards || '1 2 3'), format(' {0} ', matrix.shard)) }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
