@@ -64,6 +64,9 @@ jobs:
       - name: Extract debs from container
         run: |
           sudo docker cp termux-package-builder:/tmp/debs ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}
+          # docker cp via sudo leaves root-owned files; the sanitize mv below runs
+          # as the runner user and would fail with "Permission denied".
+          sudo chown -R $(id -u):$(id -g) ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}
           echo "--- deb count ---"
           ls ./debs-${{ matrix.arch }}-shard${{ matrix.shard }}/*.deb | wc -l
           echo "--- sample ---"
