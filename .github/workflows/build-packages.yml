@@ -16,6 +16,10 @@ on:
         description: 'Space-separated shards to build (default: 1 2 3)'
         required: false
         default: '1 2 3'
+      packages:
+        description: 'Space-separated package names for ad-hoc builds (overrides shard list)'
+        required: false
+        default: ''
 
 jobs:
   setup:
@@ -57,6 +61,7 @@ jobs:
             2) PKGS="python nmap iproute2 net-tools fzf ripgrep make libcurl proot proot-distro" ;;
             3) PKGS="nodejs golang ffmpeg imagemagick php ruby" ;;
           esac
+          if [ -n "${{ github.event.inputs.packages }}" ]; then PKGS="${{ github.event.inputs.packages }}"; fi
           echo "Building: $PKGS"
           # shellcheck disable=SC2086
           ./scripts/run-docker.sh ./build-package.sh -a ${{ matrix.arch }} -o /tmp/debs $PKGS
