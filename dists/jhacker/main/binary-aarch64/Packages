@@ -1,0 +1,819 @@
+Package: 7zip
+Version: 26.04
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 9760
+Conflicts: p7zip
+Replaces: p7zip
+Provides: p7zip
+Homepage: https://www.7-zip.org
+Description: 7-Zip file archiver with a high compression ratio
+Filename: pool/7zip_26.04_aarch64.deb
+Size: 1554064
+MD5sum: f30e20d2f55ee6670fa7d16fea8eebc8
+SHA1: 6ff68f49c3c8039711a35cc91ce683e750ce851f
+SHA256: df84685c27770d440787dba60b130b6d564c20d4ca7702e25e6e2fc0413e5eed
+
+Package: apt
+Version: 2.8.1-2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 4064
+Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
+Suggests: gnupg
+Conflicts: apt-transport-https, libapt-pkg, unstable-repo, game-repo, science-repo
+Replaces: apt-transport-https, libapt-pkg, unstable-repo, game-repo, science-repo
+Provides: unstable-repo, game-repo, science-repo
+Homepage: https://packages.debian.org/apt
+Description: Front-end for the dpkg package manager
+Filename: pool/apt_2.8.1-2_aarch64.deb
+Size: 1043636
+MD5sum: 8b1cf99214dc8ef2d6890f97286eb0e3
+SHA1: 54fa1e41b7aaa371593fd160242ead42c0207cbb
+SHA256: c68f55a7a91a69be616a1c4c1b200e0bf2dc0529858e42c3f7896fc21f969499
+
+Package: apt-ftparchive
+Version: 2.8.1-2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 316
+Depends: libdb, apt (= 2.8.1-2)
+Homepage: https://packages.debian.org/apt
+Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
+Filename: pool/apt-ftparchive_2.8.1-2_aarch64.deb
+Size: 95616
+MD5sum: ea47cee9153c14e110db29687d96b348
+SHA1: 1b04b7d9eb1298725c98ec0cb4f46b8bafbccbaf
+SHA256: d9a1e1a46340ea9222c958ea30fd1e38ca7b14de082598ff902affbe50352db3
+
+Package: apt-transport-tor
+Version: 2.8.1-2
+Architecture: all
+Maintainer: @termux
+Installed-Size: 44
+Depends: tor, apt (= 2.8.1-2)
+Homepage: https://packages.debian.org/apt
+Description: APT transport for anonymous package downloads via Tor
+Filename: pool/apt-transport-tor_2.8.1-2_all.deb
+Size: 936
+MD5sum: 26c6ad1e5329157b391acb1102b334f4
+SHA1: ab334c89a4aceaccf9c87983feac7273902e4a58
+SHA256: 7e0481237958bdb0fb12db81685d61aabffeea6824731e213701786d1219962b
+
+Package: curl
+Version: 8.22.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 424
+Depends: libcurl (= 8.22.0)
+Homepage: https://curl.se/
+Description: Command line tool for transferring data with URL syntax
+Filename: pool/curl_8.22.0_aarch64.deb
+Size: 245732
+MD5sum: c53fecd64b4d3ac9510e843f361b7571
+SHA1: d963e156d7c10b36a930504f1b0a782908ae3adb
+SHA256: 7d77feb5400cd192d82f0b5c84e48a1a4cd6ad06f1675cc26d9bc55e6532361b
+
+Package: dnsutils
+Version: 9.20.29
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 6892
+Depends: cmocka, json-c, krb5, libandroid-execinfo, libandroid-glob, libcap, libnghttp2, liburcu, libuv, libxml2, openssl, readline, resolv-conf, zlib
+Breaks: dnsutils-dev
+Replaces: dnsutils-dev
+Homepage: https://www.isc.org/bind/
+Description: Clients provided with BIND
+Filename: pool/dnsutils_9.20.29_aarch64.deb
+Size: 1714612
+MD5sum: 9560d4996f04b1d48c67714136c7e4f1
+SHA1: 56dfaadb317415e13f3ced7aa574623bb096fa5a
+SHA256: a6be3d2e0151094b02b0715fed6a325cd255c6ff93af00de3b07183a03957c90
+
+Package: ffmpeg
+Version: 8.1.3
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 36600
+Depends: fontconfig, freetype, fribidi, game-music-emu, glslang, harfbuzz, libaom, libandroid-glob, libandroid-shmem, libandroid-stub, libass, libbluray, libbs2b, libbz2, libdav1d, libdvdnav, libdvdread, libiconv, libjxl, liblzma, libmysofa, libmp3lame, libopencore-amr, libopenmpt, libopus, libplacebo, librav1e, libsoxr, libsrt, libssh, libtheora, libv4l, libvidstab, libvmaf, libvo-amrwbenc, libvorbis, libvpx, libwebp, libx264, libx265, libxcb, libxml2, libzimg, libzmq, littlecms, ocl-icd, openssl, rubberband, svt-av1, vulkan-icd, xvidcore, zlib
+Conflicts: libav
+Breaks: ffmpeg-dev
+Replaces: ffmpeg-dev
+Homepage: https://ffmpeg.org
+Description: Tools and libraries to manipulate a wide range of multimedia formats and protocols
+Filename: pool/ffmpeg_8.1.3_aarch64.deb
+Size: 10975032
+MD5sum: e75162985ce2d0c422862009eda6863f
+SHA1: 21130afd5a6f82ab2ca2256070fe7013ca1fe1ee
+SHA256: 34dc86aab56c0ddfdd9e38bfe0e9edbcfc5b7d007dc14c2be45c378eded08c05
+
+Package: fzf
+Version: 0.74.4
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 5872
+Depends: bash, findutils, ncurses-utils
+Suggests: tmux
+Homepage: https://junegunn.github.io/fzf/
+Description: Command-line fuzzy finder
+Filename: pool/fzf_0.74.4_aarch64.deb
+Size: 1606636
+MD5sum: f58295ce5fcd7a63df85976a8439c96b
+SHA1: b0a22ab9c8c4fd12f26c7a0305d48a5ba6757c13
+SHA256: a5952e27b9ca65ab445c06460f429db4ea8f0e92817af0f448d18a3f2b28bd97
+
+Package: git
+Version: 2.56.0
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 25076
+Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
+Recommends: openssh
+Suggests: perl
+Homepage: https://git-scm.com/
+Description: Fast, scalable, distributed revision control system
+Filename: pool/git_2.56.0_aarch64.deb
+Size: 4537956
+MD5sum: 31299f9760165e5eecc69682872bb33c
+SHA1: 69649821ab48eb97d13b09c3bc271747800f436f
+SHA256: c134c6270ff0b13631f2c9ab9a26b9660fa02a31c040e255b32aed5d4f39850b
+
+Package: git-gitk
+Version: 2.56.0
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 988
+Depends: tk, git (= 2.56.0)
+Homepage: https://git-scm.com/
+Description: Git repository browser
+Filename: pool/git-gitk_2.56.0_aarch64.deb
+Size: 145516
+MD5sum: ce1e5aca9b871ecd90dc5eab85986d2e
+SHA1: 50b76bb716a35be7e21d15773456b2a1aceae4c6
+SHA256: 92a32fd5ee5c2ebe351985fd4cd376c57c587fbcc58d3cbcbb11f609d78663cf
+
+Package: git-gui
+Version: 2.56.0
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 1564
+Depends: tk, git (= 2.56.0)
+Homepage: https://git-scm.com/
+Description: A graphical interface to Git
+Filename: pool/git-gui_2.56.0_aarch64.deb
+Size: 215592
+MD5sum: 38007a1467409a652027b2313cea39b0
+SHA1: 76d3c08f13d8fcde3909907d7c5b46473b7093a5
+SHA256: 581129a1aaf9de31d3485b07fc04b14b04e50f3ee18f6f691b826eadff936de4
+
+Package: git-svn
+Version: 2.56.0
+Architecture: all
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 320
+Depends: subversion-perl, git (= 2.56.0)
+Homepage: https://git-scm.com/
+Description: Convert between Git and Subversion repositories
+Filename: pool/git-svn_2.56.0_all.deb
+Size: 75528
+MD5sum: a9ea606ee7bbd13db79d78a756b3ca3b
+SHA1: 0e7bdcfb2bdcfcf362b95946fce9c3ed1ec29757
+SHA256: 1261d3c749b52612bf145af8402abe188d77ce64cc23b07ec6ceecb5170f6c8d
+
+Package: golang
+Version: 3:1.27.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 223812
+Depends: clang
+Recommends: resolv-conf
+Homepage: https://go.dev/
+Description: Go programming language compiler
+Filename: pool/golang_3_1.27.1_aarch64.deb
+Size: 38087412
+MD5sum: 7b6e4cb54cdb7846cb8a1c9209cbdbbf
+SHA1: 80c5adbfe1eaf00a5491d9de6c55cbf2703900c0
+SHA256: be78526109968932987ee8ddedcc42ec5343cf8ea2b2334ea2f5758c647407bb
+
+Package: golang-doc
+Version: 3:1.27.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 476
+Depends: golang (= 3:1.27.1)
+Homepage: https://go.dev/
+Description: Go programming language - documentation
+Filename: pool/golang-doc_3_1.27.1_aarch64.deb
+Size: 94596
+MD5sum: c6f302ee8494bf7267acb03a79c881c8
+SHA1: e1329901e050c1584a7ba20aa79e504746d729c5
+SHA256: 056ba3603d5f9e42bd5e254071b777e32cbae2e790d35e7f1f5d1fd95804c94e
+
+Package: htop
+Version: 3.5.3
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 444
+Depends: libandroid-support, ncurses
+Conflicts: htop-legacy
+Breaks: htop-legacy
+Replaces: htop-legacy
+Homepage: https://htop.dev/
+Description: Interactive process viewer for Linux
+Filename: pool/htop_3.5.3_aarch64.deb
+Size: 130936
+MD5sum: cecebc3e79588e88778cf65aebc19026
+SHA1: b59803a9f1d389aa9ef2ef24c78722292583192a
+SHA256: e74d346750405215dcc122fac1d03634516beb21007b768eac1f41e12c72e6b6
+
+Package: imagemagick
+Version: 7.1.2.32
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 6948
+Depends: djvulibre, fftw, fontconfig, freetype, gdk-pixbuf, ghostscript, glib, graphviz, harfbuzz, imath, jbig2dec, libandroid-support, libbz2, libc++, libcairo, libheif, libjpeg-turbo, libjxl, liblqr, libltdl, liblzma, libpng, libraqm, libraw, librsvg, libtiff, libwebp, libx11, libxext, libxml2, libzip, littlecms, openexr, openjpeg, pango, zlib
+Breaks: imagemagick-dev, imagemagick-x
+Replaces: imagemagick-dev, imagemagick-x
+Homepage: https://www.imagemagick.org/
+Description: Suite to create, edit, compose, or convert images in a variety of formats
+Filename: pool/imagemagick_7.1.2.32_aarch64.deb
+Size: 1845148
+MD5sum: a38a32e4ae400e1fcdec9ecc966cccff
+SHA1: 435cccecebd9ec910061d4bd93e277c5a2a5600a
+SHA256: acb7014b8a6d083e69b1d8c160fabb5e70611004f5f467c9dd6b1a799d531889
+
+Package: imagemagick-static
+Version: 7.1.2.32
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 9920
+Depends: imagemagick (= 7.1.2.32)
+Homepage: https://www.imagemagick.org/
+Description: Static libraries for imagemagick
+Filename: pool/imagemagick-static_7.1.2.32_aarch64.deb
+Size: 1947580
+MD5sum: 07d71f7bbc22125bf5f5650d4e27ffc2
+SHA1: bc3cde43cddeec702079c30b728df86809e16149
+SHA256: 64c07657dc3b503b3874d91c38d0d0a7d2250ed62548f7c906a27cd70bfd4f54
+
+Package: iproute2
+Version: 7.2.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 2988
+Depends: libandroid-glob, libandroid-support
+Homepage: https://wiki.linuxfoundation.org/networking/iproute2
+Description: Utilities for controlling networking
+Filename: pool/iproute2_7.2.0_aarch64.deb
+Size: 849984
+MD5sum: 1892842ff6044a6127229902f7a9feca
+SHA1: c9b2f894cefe660c41211ceedd2b714676e56ca0
+SHA256: a9e212707cdd8fbf082a04d57bac05eed276255e81f14c8523580c39cf6ffbf9
+
+Package: jq
+Version: 1.8.2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 524
+Depends: oniguruma
+Breaks: jq-dev
+Replaces: jq-dev
+Homepage: https://jqlang.org/
+Description: Command-line JSON processor
+Filename: pool/jq_1.8.2_aarch64.deb
+Size: 184672
+MD5sum: 58b742ffe3080d76fa61cd5ef24ba5d3
+SHA1: 4d82aa8562dae0a8ba6f386ad831770a004c1533
+SHA256: fe2374890890a4664523fdf72ea7e0a4f85c1baf9cc33dcc62636d17e2103c0a
+
+Package: jq-static
+Version: 1.8.2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 628
+Depends: jq (= 1.8.2)
+Homepage: https://jqlang.org/
+Description: Static libraries for jq
+Filename: pool/jq-static_1.8.2_aarch64.deb
+Size: 141620
+MD5sum: c39f84d719d6398734267e856ee29325
+SHA1: 50b64f0cb73edd937c6a46e66d96d17af31e785c
+SHA256: b3c8d81bddea0800e7038ae7bf41c45ea06f050603f1db33bcff6bd1a7cb7c00
+
+Package: libcurl
+Version: 8.22.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 3540
+Depends: libnghttp2, libnghttp3, libngtcp2, libssh2, openssl (>= 1:3.2.1-1), zlib
+Conflicts: apt (<< 1.4.8-8)
+Breaks: libcurl-dev
+Replaces: libcurl-dev
+Homepage: https://curl.se/
+Description: Easy-to-use client-side URL transfer library
+Filename: pool/libcurl_8.22.0_aarch64.deb
+Size: 1032752
+MD5sum: d35c36354dff1a1d23be7bd0761e0142
+SHA1: e224febfc9f228f6ac5b7d6ae72b364ebb9a4a59
+SHA256: b0198bdaa44d632b57f7e384bc08ad21ffa1f2e7cc35bd9d677df58132934ba7
+
+Package: libcurl-static
+Version: 8.22.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 2068
+Depends: libcurl (= 8.22.0)
+Homepage: https://curl.se/
+Description: Static libraries for libcurl
+Filename: pool/libcurl-static_8.22.0_aarch64.deb
+Size: 426740
+MD5sum: dd12ff368f6d41531c78d0e81fdf57cf
+SHA1: e9fc83567c9a5cafe727ee04043e3e6f9f6a01c4
+SHA256: 674e8035367bed980552ac6685d31ee4a4ae2bd7480bc7a80aaaebfaf0228801
+
+Package: make
+Version: 4.4.1-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 944
+Conflicts: make-guile
+Breaks: make-dev
+Replaces: make-dev
+Homepage: https://www.gnu.org/software/make/
+Description: Tool to control the generation of non-source files from source files
+Filename: pool/make_4.4.1-1_aarch64.deb
+Size: 241356
+MD5sum: 389e9934d931b347891befd6862bae20
+SHA1: 1e1cfe16493fff8d28e636ed19912f0e43478bd1
+SHA256: ef5096d3948175fa37f0f4979205b9c1334338c924892bd14c1c2aa3d9775ab4
+
+Package: net-tools
+Version: 2.10.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 568
+Homepage: http://net-tools.sourceforge.net/
+Description: Configuration tools for Linux networking
+Filename: pool/net-tools_2.10.0-1_aarch64.deb
+Size: 118700
+MD5sum: db3890f1c5cbc88aa2d0369b3bb93767
+SHA1: c5c1ad334d987e4b836da824a71b1db8989ae51a
+SHA256: bd3ce470a9fef7c58afc334b5a516630512621b75abc8487f206ffa251609988
+
+Package: nmap
+Version: 7.991
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 27728
+Depends: libc++, lua54, libpcap, libssh2, openssl, pcre2, resolv-conf, zlib
+Breaks: nmap-ncat
+Replaces: nmap-ncat
+Provides: nc, ncat, netcat
+Homepage: https://nmap.org/
+Description: Utility for network discovery and security auditing
+Filename: pool/nmap_7.991_aarch64.deb
+Size: 5156272
+MD5sum: f703efd17539845371d00a36cf7a3c02
+SHA1: 35a7ef6abbdced487fa55b819f8ae27c76bd0ab9
+SHA256: a5089234987d5fa6e6cbfb5e63969f8d2b765e0e6bfeef77c40d09013cfdd43f
+
+Package: nodejs
+Version: 26.4.0-1
+Architecture: aarch64
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 50424
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib, libffi
+Recommends: npm
+Suggests: clang, make, pkg-config, python
+Conflicts: nodejs-lts, nodejs-current
+Breaks: nodejs-dev
+Replaces: nodejs-current, nodejs-dev
+Homepage: https://nodejs.org/
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/nodejs_26.4.0-1_aarch64.deb
+Size: 10347608
+MD5sum: 86d54fd03e720e72b76dc7343f10b9d4
+SHA1: 06831b5192762ed7e9a87ec96b93e388f7d6aa46
+SHA256: 2fe35baeaed5b1d10ac31d1480786d060649886ce8a5566c471eb6df74bfe4c9
+
+Package: openssh
+Version: 10.5p1
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 6380
+Depends: krb5, ldns, libandroid-support, libedit, openssh-sftp-server, openssl, termux-auth, zlib
+Suggests: termux-services
+Conflicts: dropbear
+Homepage: https://www.openssh.com/
+Description: Secure shell for logging into a remote machine
+Filename: pool/openssh_10.5p1_aarch64.deb
+Size: 962364
+MD5sum: 3e05602e2a6647fce3773a2e2c0fae61
+SHA1: d964f1719e8a5d7a6ca4f908b585144371592b11
+SHA256: a2a6953ec491221c5af194060f4f9bb8afbf83a10b3df0708be31bfdd3cba09d
+
+Package: openssh-sftp-server
+Version: 10.5p1
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 188
+Depends: libandroid-support
+Breaks: openssh (<= 9.9p2-1)
+Replaces: openssh (<= 9.9p2-1)
+Homepage: https://www.openssh.com/
+Description: OpenSSH SFTP server subsystem
+Filename: pool/openssh-sftp-server_10.5p1_aarch64.deb
+Size: 56412
+MD5sum: 40416262feeae2003d762eb1d569f454
+SHA1: 92d7097a0d51677d077972335f6488077d4a33d5
+SHA256: b42e3cb41cd64313e92d4a3579db94ace95913fbd98b123e884ed2b0fec96659
+
+Package: php
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 75972
+Depends: capstone, libandroid-glob, libandroid-support, libbz2, libc++, libcurl, libffi, libgmp, libiconv, libicu, libresolv-wrapper, libsqlite, libxml2, libxslt, libzip, oniguruma, openssl, pcre2, readline, tidy, zlib
+Conflicts: php-mysql, php-dev
+Replaces: php-mysql, php-dev
+Homepage: https://php.net
+Description: Server-side, HTML-embedded scripting language
+Filename: pool/php_8.5.1_aarch64.deb
+Size: 11746720
+MD5sum: 5069f17f80038e7a5c5f142cf8666103
+SHA1: 49ef4cc1d083bf6823d64a0eeef82d9e24030e22
+SHA256: 2ace90616fa0cb2c04b4ad81292f2cc45b36f2dedfe0ece61cd87a0dfc8138a8
+
+Package: php-apache
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 22296
+Depends: apache2, apr-util, php (= 8.5.1)
+Homepage: https://php.net
+Description: Apache 2.0 Handler module for PHP
+Filename: pool/php-apache_8.5.1_aarch64.deb
+Size: 3620896
+MD5sum: 1d8f7b8f81da1803f42f4eea00b771e5
+SHA1: 966df0f2537e2ee3370d764a639e8f7147c5d3c5
+SHA256: 905f5c6e1e69ea6f67ea5f1b3263acddd7f0f5ce49a0d2d2a323c69eec585184
+
+Package: php-apache-ldap
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 172
+Depends: openldap, php-apache, php (= 8.5.1)
+Homepage: https://php.net
+Description: LDAP module for PHP/Apache
+Filename: pool/php-apache-ldap_8.5.1_aarch64.deb
+Size: 25992
+MD5sum: 0c2346e86fe872ac1737ca73a6f9e9d6
+SHA1: 4487ce0664f6214c3001439bbcaa0529a0c4a30c
+SHA256: 4a807bc2882d5c6dc222fbd577c993248c85e4dbaf41ecbc77a502cc2f0518d7
+
+Package: php-apache-pgsql
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 308
+Depends: php-apache, postgresql, php (= 8.5.1)
+Homepage: https://php.net
+Description: PostgreSQL modules for PHP/Apache
+Filename: pool/php-apache-pgsql_8.5.1_aarch64.deb
+Size: 58552
+MD5sum: 12dbaadd760f3664d1091793899542fd
+SHA1: 602ea1d7636ebef847f6e2516c4eaeb623b0ba60
+SHA256: 7999c0cf348d5447000a0b576d36f85d3f8a30207b9ffd9d127ac71fee050f91
+
+Package: php-apache-sodium
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 172
+Depends: libsodium, php-apache, php (= 8.5.1)
+Homepage: https://php.net
+Description: Sodium module for PHP/Apache
+Filename: pool/php-apache-sodium_8.5.1_aarch64.deb
+Size: 22276
+MD5sum: f87d5735f3c13b8ee616ac917be61ad9
+SHA1: 768c69531952ddcd0421df72d9f883c34d2d4682
+SHA256: 764e37de7bb697c7cc1ba24f8ca1202f1a90fbc4ed0e2dd88448d20152d9adfa
+
+Package: php-fpm
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 22348
+Depends: php (= 8.5.1)
+Breaks: php (<< 8.1.12)
+Replaces: php (<< 8.1.12)
+Homepage: https://php.net
+Description: FastCGI Process Manager for PHP
+Filename: pool/php-fpm_8.5.1_aarch64.deb
+Size: 3680804
+MD5sum: 52cce03fb7b1e85d3be6c01b0983241a
+SHA1: 350d313fc3602f8caf20ed292c46329069e9385c
+SHA256: 7044e0f9de149035ffeac02fffe4fd0c7f7c0a43b8bd17e2495ef7d7f779d9f1
+
+Package: php-gd
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 168
+Depends: libgd, php (= 8.5.1)
+Homepage: https://php.net
+Description: gd module for PHP
+Filename: pool/php-gd_8.5.1_aarch64.deb
+Size: 30388
+MD5sum: 1f555ec0a3f3c4a2a7d7e3b10ae73c61
+SHA1: dca6ebebf386a6be9a5aba7c02c1ded15ed773aa
+SHA256: 9e9838909003c56b9368eb8849f9817916710ac2cfcf7ebcdd9af5463de805ab
+
+Package: php-ldap
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 136
+Depends: openldap, php (= 8.5.1)
+Homepage: https://php.net
+Description: LDAP module for PHP
+Filename: pool/php-ldap_8.5.1_aarch64.deb
+Size: 25812
+MD5sum: ac470fc80747e345eb2a39893d731ce0
+SHA1: 5568621363c54f96c094214c5bc21aae7914007d
+SHA256: 0193191ead7910413c937682400b06ed646d03ce1a0c5209a85b913b8939b75d
+
+Package: php-pgsql
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 256
+Depends: postgresql, php (= 8.5.1)
+Homepage: https://php.net
+Description: PostgreSQL modules for PHP
+Filename: pool/php-pgsql_8.5.1_aarch64.deb
+Size: 58380
+MD5sum: 3b634fc252be2a29cf1b68e3222bb08c
+SHA1: 31faf02497cedf182d293c1f30d61bb34e4d039e
+SHA256: 9694ac16ac4fdfca643cc5c98789f158381b67bd83df908dd6f64b8f91ed2b23
+
+Package: php-sodium
+Version: 8.5.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 144
+Depends: libsodium, php (= 8.5.1)
+Homepage: https://php.net
+Description: Sodium module for PHP
+Filename: pool/php-sodium_8.5.1_aarch64.deb
+Size: 22124
+MD5sum: 9b18914c0056fcd66804d8b41ebc70e0
+SHA1: 3f08ff53033f12b012e9122cf1f7f19487870668
+SHA256: 47ee99e7aeff5e386c3d82493bd1683a898b328474ef3547ddde643c68ba1ad1
+
+Package: proot
+Version: 5.1.107.96
+Architecture: aarch64
+Maintainer: Michal Bednarski @michalbednarski
+Installed-Size: 340
+Depends: libandroid-shmem, libtalloc
+Suggests: proot-distro
+Homepage: https://proot-me.github.io/
+Description: Emulate chroot, bind mount and binfmt_misc for non-root users
+Filename: pool/proot_5.1.107.96_aarch64.deb
+Size: 98712
+MD5sum: eec59ed40db8b28db7f2fda791030bb6
+SHA1: a686cf1fbfa100170898879b5d330bf9266e623c
+SHA256: 275aa6720e875390ceda7be8302891d9964d811df1b9c2df30d76a4bbbf4fa8f
+
+Package: proot-distro
+Version: 5.9.0
+Architecture: all
+Maintainer: @termux
+Installed-Size: 1640
+Depends: proot (>= 5.1.107-71), python, python-pip
+Suggests: bash-completion, termux-api, zsh-completions
+Homepage: https://github.com/termux/proot-distro
+Description: Termux official utility for managing proot'ed Linux distributions
+Filename: pool/proot-distro_5.9.0_all.deb
+Size: 274132
+MD5sum: ba9c37ffbfbcb1088a0f1ac645a02556
+SHA1: 5aa85038a6275cd14d390201e6cb3939c139a87e
+SHA256: ed36f8b1a6ebbee8ac79f4d6d27405f6f6ed8c05c9481516ffd07bcd660e5b2c
+
+Package: python
+Version: 3.14.6-1
+Architecture: aarch64
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 26196
+Depends: gdbm, libandroid-posix-semaphore, libandroid-support, libbz2, libcrypt, libexpat, libffi, liblzma, libsqlite, ncurses, ncurses-ui-libs, openssl, readline, zlib, zstd
+Recommends: python-ensurepip-wheels, python-pip
+Suggests: python-tkinter
+Breaks: python2 (<= 2.7.15), python-dev
+Replaces: python-dev
+Provides: python3
+Homepage: https://python.org/
+Description: Python 3 programming language intended to enable clear programs
+Filename: pool/python_3.14.6-1_aarch64.deb
+Size: 4825332
+MD5sum: 69d28795c2a3c42ef6cb66c21599c64c
+SHA1: fba98873e60c79d124e4a8b073b8803660a8a725
+SHA256: fc11ca3a1ce9c0f8d2803ca43950f1be1788f0d14770ea743d152bd3c27cfe1b
+
+Package: python-ensurepip-wheels
+Version: 3.14.6-1
+Architecture: all
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 1812
+Depends: python (= 3.14.6-1)
+Breaks: python (<< 3.11.1-3)
+Replaces: python (<< 3.11.1-3)
+Homepage: https://python.org/
+Description: Wheels for Python ensurepip
+Filename: pool/python-ensurepip-wheels_3.14.6-1_all.deb
+Size: 1740180
+MD5sum: 7b84dd3d6619ba8d3099a86734982420
+SHA1: 1f9d60ec30529c7ad5680ee0f604709696a6cf0b
+SHA256: f69e1069d2888566c7207e0fae188e77cf11c7ddabe395bd6d3b4bcf17f83ccb
+
+Package: python-static
+Version: 3.14.6-1
+Architecture: aarch64
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 51996
+Depends: python (= 3.14.6-1)
+Homepage: https://python.org/
+Description: Static libraries for python
+Filename: pool/python-static_3.14.6-1_aarch64.deb
+Size: 7729132
+MD5sum: 1efe058bff41f78f19df6fe37c3415fe
+SHA1: ee5f95c196f2592dcce4850a68ab08e58ae9e639
+SHA256: b65fe45245c475f8333ad26cd8f920f7ad1c0b2e164c58df64e0dd9240b51e86
+
+Package: python-tkinter
+Version: 3.14.6-1
+Architecture: aarch64
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 2640
+Depends: tcl, tk, python (= 3.14.6-1)
+Breaks: python (<< 3.11.1-3)
+Replaces: python (<< 3.11.1-3)
+Homepage: https://python.org/
+Description: Tkinter support for Python 3
+Filename: pool/python-tkinter_3.14.6-1_aarch64.deb
+Size: 507244
+MD5sum: 4ff82683687736a8bc9f87eef463f131
+SHA1: 39b3f6f334b4cc5920d121469be496ed581219dc
+SHA256: a145e3e11f7c60e0a62bffe385709ec59a16e07661a2289821f693777ebe3471
+
+Package: ripgrep
+Version: 15.2.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 5064
+Depends: pcre2
+Recommends: brotli, lz4
+Homepage: https://github.com/BurntSushi/ripgrep
+Description: Search tool like grep and The Silver Searcher
+Filename: pool/ripgrep_15.2.0_aarch64.deb
+Size: 1223752
+MD5sum: ff5053360c3a6ce62ef0bb65dd1b9207
+SHA1: ee45fafae77df5884969163b933e90a95470431a
+SHA256: b21a2d92008d4bfcb3af370018c9fd223decc81d88db4737de73db6ed439c902
+
+Package: ruby
+Version: 4.0.7
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 46176
+Depends: libandroid-execinfo, libandroid-support, libffi, libgmp, readline, openssl, libyaml, zlib
+Recommends: clang, make, pkg-config, resolv-conf
+Breaks: ruby-dev
+Replaces: ruby-dev
+Homepage: https://www.ruby-lang.org/
+Description: Dynamic programming language with a focus on simplicity and productivity
+Filename: pool/ruby_4.0.7_aarch64.deb
+Size: 9756324
+MD5sum: 82a26e986df47d669104eb3fb53f639b
+SHA1: 140c2e92c03802b2ea802482281e5fbec0a71cb1
+SHA256: a72a4e519bf0db42fe66d687a9826aa44f6f81a9b630434b9366d2761e3d7c5b
+
+Package: ruby-ri
+Version: 4.0.7
+Architecture: all
+Maintainer: @termux
+Installed-Size: 64044
+Depends: ruby (= 4.0.7)
+Homepage: https://www.ruby-lang.org/
+Description: Ruby documentation index
+Filename: pool/ruby-ri_4.0.7_all.deb
+Size: 1725976
+MD5sum: a5a26f6f163b9a06b3dc275b30c8514b
+SHA1: e5853678b2dba75bbaedda43e62a613d9fa945cf
+SHA256: 4e45c5f4abdccfddb4973fa504857b1f84fbdfb5c585ffe73a61aabcfdb3b9ff
+
+Package: tmux
+Version: 3.7c-1
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 1192
+Depends: ncurses, libevent, libandroid-support, libandroid-glob, utf8proc
+Homepage: https://tmux.github.io/
+Description: Terminal multiplexer
+Filename: pool/tmux_3.7c-1_aarch64.deb
+Size: 386756
+MD5sum: 0b85f520af72a8db2c0c4b0d330b38f9
+SHA1: 54734b828999b1538d77ac65e7a566cbc856d9fc
+SHA256: f7e24fc2425c78245d4a78b8dc9cdcc5b18831ebe88a640f2ca1b00ebce0339e
+
+Package: unzip
+Version: 6.0-10
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 328
+Depends: libbz2
+Homepage: https://sourceforge.net/projects/infozip/
+Description: Tools for working with zip files
+Filename: pool/unzip_6.0-10_aarch64.deb
+Size: 117092
+MD5sum: 4530182be8fd75b381761a4427806f55
+SHA1: 6faba3a5a0a9633d33481e8d7e39a88904e43cc8
+SHA256: f5914d74fe3916590c4e861bcd6eeda6a5fea8f7cb1bc062ce18b9a1404d63b2
+
+Package: vim
+Version: 9.2.1150
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 35424
+Depends: libiconv, libsodium, ncurses
+Recommends: diffutils, xxd
+Suggests: luajit, perl, python, ruby, tcl
+Conflicts: vim-gtk
+Breaks: vim-python, vim-runtime
+Replaces: vim-python, vim-runtime
+Provides: vim-python
+Homepage: https://www.vim.org
+Description: Vi IMproved - enhanced vi editor
+Filename: pool/vim_9.2.1150_aarch64.deb
+Size: 6830692
+MD5sum: b7e8e4478e58ff0515f139b92cc3f86f
+SHA1: f61b0d3ce9605a1db7800315194fbf9304de75d3
+SHA256: fd70aeaf66dc9ee837b8f4ac851fb5c679109034cba2d195e88ec425f246cf89
+
+Package: wget
+Version: 1.25.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 792
+Depends: libandroid-support, libiconv, libidn2, libuuid, openssl, pcre2, zlib
+Homepage: https://www.gnu.org/software/wget/
+Description: Commandline tool for retrieving files using HTTP, HTTPS and FTP
+Filename: pool/wget_1.25.0-1_aarch64.deb
+Size: 281916
+MD5sum: ffe0a5779c66a798fc215d131d3856f3
+SHA1: e50a86000dbae9b6168135defd1659fd1e7ff819
+SHA256: 925e6d7f50fa028b44e18c7af4430a51bec6403451cc1fecd53f090b869d9fc6
+
+Package: whois
+Version: 5.6.6
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 240
+Depends: libcrypt, libiconv, libidn2
+Conflicts: inetutils (<< 1.9.4-13)
+Homepage: https://github.com/rfc1036/whois
+Description: An intelligent Whois client
+Filename: pool/whois_5.6.6_aarch64.deb
+Size: 38920
+MD5sum: 7e424be0165dd9edb811fe70b17b3fd7
+SHA1: 5933ddea773501ae2ed2ecc8514c0826b033fd9f
+SHA256: abebf19a87fd2c8cb21e1d6df84bd5e8548ad7802d586f9ef49c7afdda53ee10
+
+Package: xxd
+Version: 9.2.1150
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 68
+Homepage: https://www.vim.org
+Description: Hexdump utility from vim
+Filename: pool/xxd_9.2.1150_aarch64.deb
+Size: 13504
+MD5sum: 552313a166e93a37cb46a4b7244e9479
+SHA1: 9dc98b7c9de92f8b21496f9221ed0a74fa1b687a
+SHA256: 793946a6992ac695f98867ce8164d5e1ec68690473750d844df6aed4fa69ec17
+
+Package: zip
+Version: 3.0-7
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 548
+Depends: libandroid-support, libbz2
+Homepage: https://sourceforge.net/projects/infozip/
+Description: Tools for working with zip files
+Filename: pool/zip_3.0-7_aarch64.deb
+Size: 142168
+MD5sum: 6419442e147e36c456ae6a00c65dda43
+SHA1: 4b24c3a78cd0b6f8809053a2ec9ddc10b50ef363
+SHA256: 77985f50e2c6deed9ab2fb5b809646cdab6116788bf068bef1d4e3828efe3af4
+

@@ -1,0 +1,8 @@
+Origin: Jhacker Terminal
+Label: Jhacker
+Suite: jhacker
+Codename: jhacker
+Date: Fri, 09 Oct 2026 06:38:13 +0000
+Components: main
+Architectures: aarch64 arm i686 x86_64
+Description: Jhacker Terminal package repository
