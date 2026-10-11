@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#0a0a0a;color:#e0e0e0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#111;border:1px solid #222;border-radius:12px;padding:32px;width:100%;max-width:420px;box-shadow:0 0 40px rgba(57,255,20,.08)}
+h1{color:#39FF14;font-size:24px;margin-bottom:8px;text-align:center}
+p.sub{color:#888;font-size:14px;text-align:center;margin-bottom:24px}
+label{display:block;color:#aaa;font-size:13px;margin:16px 0 6px}
+input,textarea{width:100%;background:#1a1a1a;border:1px solid #333;border-radius:8px;color:#fff;padding:12px;font-size:15px;outline:none}
+input:focus,textarea:focus{border-color:#39FF14}
+textarea{resize:vertical;min-height:100px}
+button{width:100%;background:#39FF14;color:#000;border:none;border-radius:8px;padding:14px;font-size:16px;font-weight:bold;margin-top:20px;cursor:pointer}
+button:hover{background:#2ee010}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>📩 Contact Karein</h1>
+<p class="sub">Apni details bharein, hum sampark karenge</p>
+<form action="submit.php" method="POST">
+<label>Naam *</label>
+<input type="text" name="name" required placeholder="Aapka naam">
+<label>Phone *</label>
+<input type="tel" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" title="10 digit ka number daalein">
+<label>Message *</label>
+<textarea name="message" required placeholder="Apna message likhein..."></textarea>
+<button type="submit">Bhej Dein →</button>
+</form>
+</div>
+</body>
+</html>
