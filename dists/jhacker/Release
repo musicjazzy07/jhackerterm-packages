@@ -2,7 +2,34 @@ Origin: Jhacker Terminal
 Label: Jhacker
 Suite: jhacker
 Codename: jhacker
-Date: Fri, 09 Oct 2026 06:38:13 +0000
-Components: main
+Date: Sun, 11 Oct 2026 08:13:45 +0000
 Architectures: aarch64 arm i686 x86_64
+Components: main
 Description: Jhacker Terminal package repository
+MD5Sum:
+ fccc022fcbb3a943ae3dabae36cfcb5c            27464 dists/jhacker/main/binary-aarch64/Packages
+ 2025cbf7ca1070e04440ae6e0b32a07e             9881 dists/jhacker/main/binary-aarch64/Packages.gz
+ 79e1cae50d6d503b1b684b62b304fa48            27069 dists/jhacker/main/binary-arm/Packages
+ 5bbecdcd2bfd6acd7f31378f12ad26b0             9858 dists/jhacker/main/binary-arm/Packages.gz
+ acf4feb29d63d6fa030273ebcda62b00            27174 dists/jhacker/main/binary-i686/Packages
+ aadb0e66d63b37187c4291ed990f84a5             9878 dists/jhacker/main/binary-i686/Packages.gz
+ 808afd49ee6380b0de10700a56f55bbd            27371 dists/jhacker/main/binary-x86_64/Packages
+ 4a37865baa48d75dbf32130192ab0014             9882 dists/jhacker/main/binary-x86_64/Packages.gz
+SHA1:
+ 629434bed9985329c6befe877b8457f426087025            27464 dists/jhacker/main/binary-aarch64/Packages
+ f278891407c9bb4752a40b489876dcfa0f964814             9881 dists/jhacker/main/binary-aarch64/Packages.gz
+ 78af4f799dc0947f63b050bf81d7fb6430855a2a            27069 dists/jhacker/main/binary-arm/Packages
+ 7226213b254640f51a943f2feb7342583d7d0afe             9858 dists/jhacker/main/binary-arm/Packages.gz
+ 912af85750aea506f897683f15c87ae41e3d4f26            27174 dists/jhacker/main/binary-i686/Packages
+ 3a865dae066625c21f5d6ad68688773d16dc7fd7             9878 dists/jhacker/main/binary-i686/Packages.gz
+ 0c918b082a10604af07f7bdfbf506bf529c5f7e0            27371 dists/jhacker/main/binary-x86_64/Packages
+ debdf515a2c57c835292f552e69f6fd1d58ebdb8             9882 dists/jhacker/main/binary-x86_64/Packages.gz
+SHA256:
+ f8173d241ab14b3821bb6f29942dc78d6783b8b6eebdf9f9f0294f628ceef995            27464 dists/jhacker/main/binary-aarch64/Packages
+ e2f52bf97be1ea00c27c7ea8fef75cdc465f3a5388d95f6a07d84fba7dde7e7b             9881 dists/jhacker/main/binary-aarch64/Packages.gz
+ 8cf26b56694ef95f02187e37fcee6ed3271aaf25f702193fc7d864e06630020c            27069 dists/jhacker/main/binary-arm/Packages
+ aac161e896fe8e31195159c2385791f105a680a119b4996933f72e65a03c4d67             9858 dists/jhacker/main/binary-arm/Packages.gz
+ b5ce7586b44b1fe8a81e1a6fdcaffd88f007d3a5f1d0939860bad894cb26950c            27174 dists/jhacker/main/binary-i686/Packages
+ 6cbc7928e2e24bdc9ceadcb9733c560a3db305e6daa32ad26e034c6c3850968d             9878 dists/jhacker/main/binary-i686/Packages.gz
+ 32e1166eb57f7276fc36b7efecc2e5029619ca970d23065c9aede155d8600a0d            27371 dists/jhacker/main/binary-x86_64/Packages
+ 42a04848e4138c8460ce9d8ba3fe8c469d02d100c9939cbd23c5bf8deb86b867             9882 dists/jhacker/main/binary-x86_64/Packages.gz
